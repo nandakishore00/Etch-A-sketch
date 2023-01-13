@@ -1,3 +1,5 @@
+let color='black'
+
 let grid=document.querySelector('.grid');
 let selectButton=document.querySelector(".btn-danger")
 selectButton.addEventListener("click",function(){
@@ -11,13 +13,23 @@ function createGrid(size){
     let numDiv=size*size;
     for (var i=0;i<numDiv;i++){
         let div=document.createElement("div");
-        div.addEventListener("mouseover",function(){
-        div.style.backgroundColor="black"
-        })
+        div.addEventListener("mouseover",colorDiv)
         grid.insertAdjacentElement("beforeend",div);
+        
     }
 }
+function colorDiv(){
 
+if(color=='random'){
+    this.style.backgroundColor=`hsl(${Math.random()*360},100%,50%)`
+}
+else if(color=='black'){
+    this.style.backgroundColor='black';
+}
+}
+function setColor(colorChoice){
+   color=colorChoice
+}
 function selectSize()
 {
     let size=prompt("enter a number between 1 to 100")
@@ -39,4 +51,4 @@ function selectSize()
     }
     return size
 }
-
+createGrid(16)
