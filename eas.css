@@ -1,0 +1,45 @@
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin:0%;
+}
+
+
+.board{
+    display:flex;
+    flex-direction:row;
+    margin-left:-150px;
+    
+
+}.gridbox{
+    height:500px;
+    width:500px;
+    border:1px solid black;
+    margin:20px 20px;
+    grid-row: ;
+}
+
+.sizeSelection{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width:300px;
+    margin-top:10px;
+}
+.buttons{
+    margin:20px 20px;
+    padding:0px;
+    height:500px;
+    width:150px;
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    
+    
+}
+.btn{
+    margin:20px;
+}
