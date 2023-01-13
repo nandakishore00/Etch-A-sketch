@@ -13,14 +13,16 @@ body{
     margin-left:-150px;
     
 
-}.gridbox{
+}
+.grid{
+    display:grid;
     height:500px;
     width:500px;
     border:1px solid black;
     margin:20px 20px;
-    grid-row: ;
+    
+    
 }
-
 .sizeSelection{
     display:flex;
     justify-content: space-between;
