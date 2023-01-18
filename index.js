@@ -6,7 +6,7 @@ let grid=document.querySelector('.grid');
 let selectButton=document.querySelector(".btn-danger")
 reset.addEventListener("click",resetButton)
 
-clickToPause.addEventListener("click",function(e){
+clickToPause.addEventListener("click",function(e){  
     if(e.target.tagName!=="BUTTON"){
         let pause=document.querySelector(".pause")
         if(click==false){
