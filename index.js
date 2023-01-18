@@ -1,32 +1,37 @@
 let color='black'
 let click=false
+let size =16
 let clickToPause=document.querySelector("body")
 let reset= document.querySelector(".btn-primary")
+let pause=document.querySelector(".pause")
 let grid=document.querySelector('.grid');
+document.querySelector(".number").innerHTML=`${size}*${size} pixels`
 let selectButton=document.querySelector(".btn-danger")
 reset.addEventListener("click",resetButton)
-
-clickToPause.addEventListener("click",function(e){  
-    if(e.target.tagName!=="BUTTON"){
-        let pause=document.querySelector(".pause")
-        if(click==false){
-        pause.innerText="U can resume sketching"
-        click=true
+clickToPause.addEventListener("click",function(e){
+    if(e.target.tagName!=="BUTTON")
+    {
+    
+    if(click==false){
+    pause.innerText="U can resume sketching"
+    click=true
     }
-    else if(click ==true){
+    else if(click ==true)
+    {
         click= false
         pause.innerText="Please click somewhere on the screen to resume sketching"
     }
-    }
+}
 })
 selectButton.addEventListener("click",function(){
     let getSize=selectSize();
     createGrid(getSize);
+    document.querySelector(".number").innerHTML=`${size}*${size} pixels`
 
 })
 function selectSize()
 {
-    let size=prompt("enter a number between 1 to 100")
+   size=prompt("enter a number between 1 to 100")
     if(size==""){
         while(size==""){
             alert("please provide input")
@@ -73,7 +78,9 @@ function resetButton(){
     let divs=document.querySelectorAll("span")
     divs.forEach((div)=>
     div.style.backgroundColor="white")
-    
-}
+    click=false
+    pause.innerText="Please click somewhere on the screen to resume sketching"  
 
+
+}
 createGrid(16)
